@@ -94,6 +94,7 @@ plugins=(
     gcloud
     golang
     terraform
+    fzf
     minikube
     npm
     auto-notify
@@ -142,15 +143,13 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -s "/Users/jwachmann/.scm_breeze/scm_breeze.sh" ] && source "/Users/jwachmann/.scm_breeze/scm_breeze.sh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 ## fzf tab completion in zsh -disabled because it was pretty slow
 #source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-# only aws command completion 
+# only aws command completion
 #zstyle ':completion:*:*:aws' fzf-search-display true
 # or for everything
 #zstyle ':completion:*' fzf-search-display true
