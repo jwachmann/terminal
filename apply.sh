@@ -26,7 +26,7 @@ brew install postman
 brew install lolcat
 brew install cowsay
 brew install fortune
-brew install asciiquaruim
+brew install asciiquarium
 brew install cmatrix
 brew install figlet
 
