@@ -33,11 +33,12 @@ brew install figlet
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+
+
+##### SETUP ZSH #####
+
 # Apply zsh preferences
 cp -i zshrc ~/.zshrc
-
-# Apply vim preferences
-cp -i vimrc ~/.vimrc
 
 # Install ZSH plugins
 git clone https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify
@@ -50,3 +51,16 @@ git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
 # Install terminal theme (Powerlevel10k)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 #p10k configure will automatically run with the next terminal window open
+
+
+
+##### SETUP VIM #####
+
+# Apply vim preferences
+cp -i vimrc ~/.vimrc
+
+# Install vim plugged (plugin manager)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "To finish setting up VIM please launch it and run ':PlugInstall'"
