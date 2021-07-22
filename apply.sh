@@ -3,8 +3,11 @@
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Copy zsh preferences
+# Apply zsh preferences
 cp -i zshrc ~/.zshrc
+
+# Apply vim preferences
+cp -i vimrc ~/.vimrc
 
 # Install plugins
 git clone https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify
