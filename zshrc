@@ -1,3 +1,6 @@
+fortune | cowsay | lolcat 
+echo ""
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -10,6 +13,9 @@ fi
 # Make personal user scripts part of the path
 export PATH="${PATH}:$HOME/bin"
 export PATH="${PATH}:$HOME/go/bin"
+
+# load curl autocompletions
+export FPATH="/opt/homebrew/opt/curl/share/zsh/site-functions:$FPATH"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -94,12 +100,13 @@ plugins=(
     gcloud
     golang
     terraform
-    fzf
+    docker-compose
     minikube
     npm
     auto-notify
     sudo
     brew
+    thefuck
     tmux
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -143,13 +150,20 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -s "/Users/jwachmann/.scm_breeze/scm_breeze.sh" ] && source "/Users/jwachmann/.scm_breeze/scm_breeze.sh"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 ## fzf tab completion in zsh -disabled because it was pretty slow
 #source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-# only aws command completion
+# only aws command completion 
 #zstyle ':completion:*:*:aws' fzf-search-display true
 # or for everything
 #zstyle ':completion:*' fzf-search-display true
+
+eval "$(rbenv init -)"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+source /Users/jwachmann/.config/broot/launcher/bash/br
