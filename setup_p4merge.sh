@@ -16,3 +16,6 @@ git config --global diff.tool p4mergetool
 git config --global difftool.p4mergetool.cmd \
 "/Applications/p4merge.app/Contents/Resources/launchp4merge \$LOCAL \$REMOTE"
 git config --global difftool.prompt false
+
+# Handy alias for diffing two files, usage: p4m oldfile newfile
+alias p4m="/Applications/p4merge.app/Contents/MacOS/p4merge"
